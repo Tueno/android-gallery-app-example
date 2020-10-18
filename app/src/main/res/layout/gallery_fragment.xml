@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.example.gallery.presentation.GalleryViewModelInterface" />
+        <variable
+                name="adapter"
+                type="com.example.gallery.presentation.GalleryItemAdapter" />
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".presentation.GalleryFragment"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{Integer.toString(viewModel.listItems.size())}"
+                tools:text="Default value" />
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/item_list_recycler_view"
+                android:layout_width="match_parent"
+                android:adapter="@{adapter}"
+                android:items="@{viewModel.listItems}"
+                android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</layout>
