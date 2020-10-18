@@ -44,6 +44,7 @@ class GalleryItemAdapter : RecyclerView.Adapter<GalleryItemAdapter.GalleryItemVH
 
     override fun setItems(items: List<Any>) {
         galleryItems = items as List<GalleryItemViewData>
+        notifyDataSetChanged()
     }
 
 }

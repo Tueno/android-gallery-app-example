@@ -8,7 +8,7 @@
                 type="com.example.gallery.presentation.GalleryViewModelInterface" />
         <variable
                 name="adapter"
-                type="com.example.gallery.presentation.GalleryItemAdapter" />
+                type="androidx.recyclerview.widget.RecyclerView.Adapter" />
     </data>
 
     <LinearLayout
