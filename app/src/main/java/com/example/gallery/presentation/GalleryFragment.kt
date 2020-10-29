@@ -47,7 +47,7 @@ class GalleryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(GalleryViewModel::class.java)
         binding.viewModel = viewModel
-        binding.adapter = GalleryItemAdapter()
+        binding.itemListRecyclerView.adapter = GalleryItemAdapter()
         binding.itemListRecyclerView.layoutManager = GridLayoutManager(context, 3)
 
         // 手動でBindする場合
